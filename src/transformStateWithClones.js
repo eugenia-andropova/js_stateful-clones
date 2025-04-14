@@ -32,7 +32,9 @@ function transformStateWithClones(state, actions) {
         break;
 
       default:
-        break;
+        history.push(nextStateCopy);
+        currentStateCopy = nextStateCopy;
+        continue;
     }
 
     history.push(nextStateCopy);
